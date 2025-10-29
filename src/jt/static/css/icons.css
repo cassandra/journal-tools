@@ -1,0 +1,116 @@
+
+/* ===== ICON SYSTEM ===== */
+
+/* Base icon class */
+.jt-icon {
+    display: inline-block;
+    vertical-align: middle;
+    fill: currentColor;
+    stroke: currentColor;
+    flex-shrink: 0;
+}
+
+/* Icon sizes */
+.jt-icon-sm {
+    width: 0.875rem;
+    height: 0.875rem;
+}
+
+.jt-icon-md {
+    width: 1rem;
+    height: 1rem;
+}
+
+.jt-icon-lg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.jt-icon-xl {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Semantic icon colors using existing CSS variables */
+.jt-icon-primary {
+    color: var(--primary-color);
+}
+
+.jt-icon-secondary {
+    color: var(--secondary-color);
+}
+
+.jt-icon-success {
+    color: var(--success-color);
+}
+
+.jt-icon-warning {
+    color: var(--warning-color);
+}
+
+.jt-icon-error {
+    color: var(--error-color);
+}
+
+.jt-icon-muted {
+    color: var(--muted-color);
+}
+
+/* Icon spacing utilities */
+.jt-icon-left {
+    margin-right: 0.375rem;
+}
+
+.jt-icon-right {
+    margin-left: 0.375rem;
+}
+
+/* Icon button integration */
+.btn .jt-icon {
+    vertical-align: text-top;
+}
+
+
+/* Ensure icons work well in different contexts */
+.card-header .jt-icon,
+.card-title .jt-icon {
+    margin-right: 0.375rem;
+}
+
+.alert .jt-icon {
+    margin-right: 0.5rem;
+}
+
+/* Legacy icon class deprecation helpers */
+.plus-icon,
+.history-icon {
+    /* These classes are deprecated. Use {% icon %} template tag instead */
+    opacity: 0.7;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .jt-icon {
+        stroke-width: 2;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .jt-icon {
+        transition: none;
+    }
+}
+
+/* History icon styling - matches plus-icon pattern */
+.history-icon {
+    font-size: 1rem;
+    color: var(--primary-color);
+    padding: 0 0.25rem;
+}
+.plus-icon {
+    font-size: 1.5rem;
+    color: var(--on-primary-color);
+    background-color: var(--primary-color);
+    padding: 0 0.25rem 0 0.25rem;
+}
